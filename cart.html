@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.loadvaogiohang {
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: aliceblue;
+
+}
+
+.banggiohang {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kkk th, .kkk td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.kkk th {
+    background-color: #f2f2f2;
+}
+
+.kkk tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.kkk img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.kkk input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.kkk button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.kkk button:hover {
+    background-color: #e60000;
+}
+
+.tong {
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #b9e1d8;
+}
+.btn-thanhtoan {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-thanhtoan:hover {
+    background-color: #45a049; /* Màu nền khi di chuột qua */
+    
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Đổi chiều rộng khi màn hình nhỏ hơn 768px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%; /* Đổi chiều rộng khi màn hình nhỏ hơn 480px */
+    
+    }
+    
+}
+
+    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/all.css">
+</head>
+<body>
+    <header>
+        <img src="image/anh1.webp" alt="">
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><img style="width: 180px; padding-top: 6px; height: 70px;"  src="image/logo-du-lich-da-nang-tourism-vn.jpg" alt=""></a></li>
+                <li id="adress-form"><a href="#">Hồ Chí Minh<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><input type="text" placeholder="Bạn tìm gì..."><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><a style="color: yellow; font-weight: bold; font-size: 20px; border-radius: 10px; padding: 10px; box-shadow: 0 0 10px 0 rgb(109, 19, 19);" href="index.html">Trang Chủ</a></li>
+                <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Mua thẻ nạp ngay!</a></li>
+                <li><a href="dangki.html">Đăng kí</a></li>
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                <li><a href=""></a>
+                    <button style="color: red; font-weight: bold; padding: 10px; border-radius: 10px; cursor: pointer; background-color: yellow;">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Giỏ hàng
+                        <div id="cart-notification"><span id="cart-count">0</span></div>
+                        <span id="slsp" style="color: #FDD52B;"></span>
+                    </button>
+                </li>
+                <div class="adress-form">
+                    <div class="adress-form-content">
+                        <h2>Chọn địa chỉ nhận hàng <span id="adress-close">x Đóng</span></h2>
+                        <form action="">
+                            <p>chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao</p>
+                            <select name="" >
+                                <option value="#">--chọn địa điểm</option>
+                                <option value="#">--Đà nẵng</option>
+                            </select>
+
+                            <select name="" >
+                                <option value="#">--chọn Quận\Huyện</option>
+                                <option value="#">--Đà nẵng</option>
+                            </select>
+
+                            <select name="" >
+                                <option value="#">--chọn Phường\Xã</option>
+                                <option value="#">--Đà nẵng</option>
+                            </select>
+
+                            <input type="text" placeholder="Số nhà, Tên đường">
+                            <button>Xác nhận</button>
+
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+
+   <section class="loadvaogiohang">
+        <table id="cart" class="banggiohang">
+            <thead class="kkk">
+                <tr>
+                    <th style="color: red;">Sản phẩm</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng</th>
+                </tr>
+            </thead>
+            <tbody class="kkk" id="tb_cart">
+                <!-- loadsanpham -->
+                
+            </tbody>
+        </table>
+        <div class="tong">Tổng thanh toán: <span id="totalPrice">0</span></div>
+        <div class="btn-thanhtoan">Thanh Toán</div>
+
+    </section>
+    <footer> 
+        <table>
+             <tr>
+                 <th><a href="#">GIỚI THIỆU</th></a>
+                 <th>CHÍNH SÁCH CÔNG TY</th>
+                 <th>TRỢ GIÚP</th>
+                 <th>THÔNG TIN KHÁC</th>
+                 <th><a href="#">LIÊN HỆ</a></th>
+             </tr>
+        </table>
+        
+        <hr>
+
+        <div>
+         <tr>
+             <td>
+                 <p>Copyright © 2008 Công ty CPTM Thế Giới Nước Hoa & Mỹ Phẩm. <br>
+                     Giấy chứng nhận ĐKKD số: 0317116620 do Sở Kế Hoạch và Đầu Tư TPHCM cấp lần đầu ngày 10/01/2022. <br>
+                     Địa chỉ văn phòng: 10-10B Cách Mạng Tháng 8, Phường Bến Thành, Quận 1, TP HCM <br>
+                     Điện thoại: 028 73020707 - Đặt Hàng: 18006047 - CSKH: 18006077</p>
+             </td>
+         </tr>
+        </div>
+     </footer>
+<script src="cart.js"></script>
+
+</body>
+</html>

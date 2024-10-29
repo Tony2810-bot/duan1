@@ -1,0 +1,628 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+.container ul li a button{
+    background-color: rgb(186, 175, 175);
+    cursor: pointer;
+    color: red;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+header{
+    background-color: #fdd013;
+    text-align: center;
+    height: 44px;
+}
+/* ------------nav---------- */
+nav{
+    background-color: #d77cf0;
+
+}
+@media only screen and (max-width: 600px) {
+            nav .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav .container .giohangne{
+                font-weight: bold;
+                width: 110px;
+                height: 70px;
+                border-radius: 10px;
+               
+                top: 50px;
+                right: 0;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                display: none;
+            }
+            .slider-product-one-content-item button{
+                left:-200px;
+                min-width: 50px;
+        float: left;
+        border-radius: 5px;
+        background-color: rgb(82, 215, 244);
+        color: black;
+        border: 2px gray solid;
+        display: block;
+            }
+            .slider-product-one{
+               display: flex;
+             
+            }
+        }
+/* Thiết lập breakpoints */
+
+/* @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    
+    .slider-product-one-content-item button{
+        left:-200px;
+        width: 125px;
+        height: 30px;
+        margin: 20px 30px;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: rgb(82, 215, 244);
+        color: black;
+        font-weight: bold;
+        border: 2px gray solid;
+    }
+} */
+
+
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+nav ul li, a{
+    color: white;
+    font-size: 15px;
+
+}
+
+nav ul li:nth-child(2) a{
+    color: #fdd013;
+}
+nav ul li:nth-child(2) i {
+    color: #fdd013;
+    font-size: 15px;
+    margin-left: 6px;
+}
+
+nav ul li:nth-child(3) {
+    position: relative;
+}
+nav ul li:nth-child(3) input {
+    height: 40px;
+    width: 350px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 6px; /*cho chữ trong ô bạn tim gì...*/
+    outline: none; /*cái ô input nó khong out line*/
+}
+nav ul li:nth-child(3) i {
+    position: absolute;
+    font-size: 18px;
+    top: 5px;
+    right: 15px;
+    color: black;
+    line-height: 30px;
+    cursor: pointer;  /*con trỏ biến thành bàn tay */
+}
+nav ul li:nth-child(4) button {
+    height: 30px;
+    padding: 0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(128, 126, 126);
+    border-radius: 5px;
+    transition: all 0.3s ease; /* */
+}
+nav ul li:nth-child(4) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(4) button:hover {
+    background-color: rgb(141, 138, 138);
+}
+
+nav ul li:nth-child(5) {
+    text-align: center;
+}
+nav ul li:nth-child(5):hover a {
+    color:#fdd013;
+}
+
+nav ul li:nth-child(6) a {
+    color:#fdd013;
+}
+.btn-content {
+    padding-top: 15px;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #fdd013;
+    display: block;
+    float: left;
+    margin-right: 10px;
+
+}
+.btn-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: white;
+    /* z-index: -1; chua co nen binh tinh */
+    display: block;
+    pointer-events: none;
+    animation: btnani 1s linear infinite; /* tốc độ nổ của cục đó */
+}
+@keyframes btnani {
+    from {
+        opacity: 0.4;
+    }
+    to{
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+nav ul li:nth-child(7):hover a {
+    color: #fdd013;
+}
+nav ul li:nth-child(8):hover a {
+    color: #fdd013;
+}
+nav ul li:nth-child(9):hover a {
+    color: #fdd013;
+}
+/* -----------------menu-bar----------*/
+.menu-bar {
+    background-color: #b04ea2;
+}
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-bar ul li a {
+    color: white;
+    font-size: 16px;
+}
+.menu-bar ul li a i {
+    margin-right: 6px;
+    font-size: 16px;
+}
+.menu-bar-content > ul > li {
+    padding: 12px 6px;
+    transition: all 0.3s ease;
+}
+.menu-bar ul li:hover {
+    background-color: rgb(235, 153, 153);
+}
+
+.menu-bar-content > ul > li:nth-child(9) {
+    position: relative;
+}
+.menu-bar-content > ul > li:nth-child(9)::before {
+    position: absolute;
+    content: "Giảm 5%";
+    display: block;
+    height: 13px;
+    width: 45px;
+    background-color: #f51212;
+    border-radius: 5px;
+    right: -25px;
+    top: 1px;
+    font-size: 10px;
+    padding-left: 3px;
+    color: white;
+    z-index: 1;
+}
+.menu-bar-content > ul > li:nth-child(9)::after { /* mui ten o duoi box giam gias*/
+    position: absolute;
+    content: "";
+    background-color: #f51212;
+    height: 5px;
+    width: 5px;
+    display: block;
+    top: 11px;
+    right: 10px;
+    /* z-index: 3; */
+    transform: rotate(45deg); /* lam nghien cai hinh vuong */
+}
+/* ---------------------adress-form ---------------*/
+.adress-form {
+    position: fixed;
+    width: 100vw; /*rong toan man hinh*/
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+    display: none;
+    z-index: 999;
+}
+.adress-form-content {
+    width: 450px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+.adress-form-content form {
+    padding: 6px 40px;
+}
+.adress-form-content h2 {
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.adress-form-content h2 span {
+    display: block;
+    position: absolute;
+    height: 30px;
+    padding: 0 6px;
+    border: 1px solid #ddd;
+    right: 12px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%); /* de cai o ra giua*/
+    line-height: 30px;
+    color: #333;
+    border-radius: 5px;
+}
+.adress-form-content form p {
+    font-size: 16px;
+}
+.adress-form-content form input,select {
+    height: 55px;
+    display: block; /*cho no xuong hang (conf inlin block thi nos nam tren mot hang*/
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 16px;
+}
+.adress-form-content form button {
+    margin-top: 20px;
+    height: 30px;
+    width: 80%;
+    cursor: pointer;
+    background-color: #f97e0e;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+/* ------------SUBMENU */
+.menu-bar-content ul li {
+    position: relative;
+}
+.submenu{
+    position: absolute;
+    background-color: #2c96c7;
+    width: 200px;
+    height: auto;
+    left: 0;
+    top: 100%;
+    padding: 12px;
+    display: none; /* cho cais sub khong thay nua*/
+    z-index: 10;
+}
+.submenu ul li:hover{
+    background-color: black;
+}
+.submenu ul {
+    display: flex;
+    flex-direction: column; 
+}
+.submenu ul li {
+    padding: 6px 0;
+}
+.menu-bar-content ul li:hover .submenu {
+    display: block;
+}
+/* --------------------slider---------------- */
+.slider {
+    padding: 20px 0;
+    height: 350px;
+}
+.slider-content {
+    display: flex;
+    justify-content: space-between;
+}
+.slider-content-left {
+    width: 100%;
+}
+.slider-content-left-top {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+/* .slider-content-left-top:hover i {
+    opacity: 1;
+} */
+.slider-content-left-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-content-left-bottom {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ddd;
+    border-top: none;
+    height: 50px;
+}
+.slider-content-left-bottom li {
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 0;
+    height: 100%;
+    line-height: 38px;
+    position: relative;
+
+}
+.slider-content-left-bottom li::before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 1px;
+    background-color: #ddd;
+    right: 0;
+}
+
+.slider-content-right {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap; /*tu dong xuonh hang*/
+    padding: 0;
+    justify-content: space-around;
+}
+.slider-content-right li {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    margin-bottom: 3px;
+}
+.slider-content-right li img {
+    height: 170px;
+    width: 170px;
+}
+.slider-content-left-top-btn {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.slider-content-left-top-btn i {
+    color: #333;
+    font-size: 32;
+    height: 50px;
+    width: 25px;
+    background-color: #dcd7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);/*nam giua*/
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/* slider java 1 */
+.slider-content-left-top img {
+    position: absolute;
+}
+.slider-content-left-top a:nth-child(2) img {
+    transform: translateX(100%);
+}
+.slider-content-left-top a:nth-child(3) img {
+    transform: translateX(200%);
+}
+.slider-content-left-top a:nth-child(4) img {
+    transform: translateX(300%);
+}
+.slider-content-left-top a:nth-child(5) img {
+    transform: translateX(400%);
+}
+.slider-content-left-top-container {
+    position: relative;
+    overflow: hidden; /*bien mat anh */
+}
+.slider-content-left-top-container:hover i {
+    opacity: 1;
+}
+.slider-content-left-top {
+    transition: all 0.3s ease;
+}
+/* ----------------------tieu de */
+.slider-content-left-bottom li.active {
+    border-top: 4px solid orange;
+    font-weight: bold;
+}
+.slider-content-left-bottom li {
+    border-top: 4px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+
+
+/* -------------------baner-1---------------- */
+.baner-one {
+    margin-top: 30px;
+}
+
+/* slider-product---------------------------- */
+.slider-product-one-content {
+    background-color: #fed100;
+    padding: 12px;
+    gap: 20px;
+}
+.slider-product-one-content-title h2 {
+    font-style: italic; /* chu in nghien */
+    padding: 12px 0;
+    text-align: center;
+    
+}
+.slider-product-one-content-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+.slider-product-one-content-item {
+    width: 19%;
+    background-color: #fff;
+    padding: 50px 12px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.slider-product-one-content-item:hover a>img {
+    transform: translateY(-20px);
+}
+.slider-product-one-content-item a>img { /* css truc tiep > la thang dung sau no thoi*/ 
+    width: 100%;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 50px 20px  #0009);
+}
+.slider-product-one-content-item button{
+    width: 125px;
+    height: 30px;
+    
+    border-radius: 5px;
+    background-color: rgb(82, 215, 244);
+    color: black;
+    font-weight: bold;
+    border: 2px gray solid;
+}
+.slider-product-one-content-item button:hover{
+    background-color: green;
+    color: white;
+}
+.slider-product-one-content-item-text {
+    padding-top: 20px;
+}
+.slider-product-one-content-item-text li {
+    margin-bottom: 6px;
+}
+.slider-product-one-content-item-text li:first-child {
+    height: 30px;
+    width: 75%;
+    background-color: rgb(196, 121, 8);
+    display: inline-block;
+    margin-bottom: 20px;
+    align-items: center;  /* can giua theo chieu docj*/
+    line-height: 30px;
+    border-radius: 40px;
+}
+.slider-product-one-content-item-text li:first-child p {
+    color: #fff;
+    font-size: 12px;
+}
+.slider-product-one-content-item-text li:first-child img {
+    width: 25px;
+    height: 20px;
+    float: left;
+    /* margin-right: 6px;
+    margin-left: 4px; */
+    margin: 3px 5px;
+}
+.slider-product-one-content-item-text li:nth-child(7) i {
+    color: orange;
+}
+.slider-product-one-content-item-text li:nth-child(2):hover {
+    color: rgb(12, 113, 207);
+
+}
+.slider-product-one-content-item-text li:nth-child(5) {
+    color: #f51212;
+    font-weight: bold
+}
+/* Thiết lập breakpoints */
+
+
+
+
+
+
+
+/* --------------------footer----------------------- */
+footer{
+    width: 100%;
+    height: 260px;
+    background-color:black;
+    clear: both;
+    /* ko tha troi (float left) */
+    line-height: 30px;
+    text-align-last: center;
+    font-size: 12px;
+    font-variant: small-caps;
+    color: white;
+}
+footer>table{
+    width: 100%;
+    height: 80px;
+    border-color: black;
+    padding: 30px 100px;
+    
+}
+table>tbody>tr>th{
+    border: 2px solid white;
+}
+table>tbody>tr>td{
+    border-bottom: 1px solid white;
+}
+
+table>tbody>tr>th>a{
+    text-decoration: none;
+    color: white;
+}
+table>tbody>tr>th>a:hover{
+    color: orange;
+}
+
+
+
